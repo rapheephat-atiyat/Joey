@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>การทดสอบลำดับความสำคัญ</h2>
+    <pre id="output"></pre>
+    <script src="script.js"></script>
+
+    <p id="oldid">old id</p>
+    <button onclick="changeid()">เปลี่ยน id</button>
+    <script>
+        function changeid(){
+            let element = document.getElementById("oldid")
+            element.id = "newid";
+            element.innerText = "ตอนนี้ id ถูกเปลี่ยนเป็น new id แล้ว"
+        }
+    </script>
+
+    <p id="mytext" class="redtext">ข้อความเริ่มต้นสีแดง</p>
+    <button onclick="changeClass()">เปลี่ยน class</button>
+    <script>
+        function changeClass(){
+            let element = document.getElementById("mytext");
+            element.className = "bluetext";
+        }
+    </script>
+    <style>
+        .redtext{
+            color: red;
+        }
+        .bluetext{
+            color: blue;
+        }
+    </style>
+
+</body>
+</html>
